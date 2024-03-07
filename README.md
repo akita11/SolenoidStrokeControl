@@ -36,7 +36,7 @@
 <img src="https://github.com/akita11/SolenoidStrokeControl/blob/main/config2.jpg" width="320px">
 
 - PortAとSolenoidUnitをGroveケーブルで接続。SolenoidUnitのオレンジ色コネクタに、ソレノイド(A+・A-端子）と+12V電源を接続する
-- PortBとGroveケーブル電源電圧変換モジュール(5V側)をGroveケーブルで接続。Groveケーブル電源電圧変換モジュール(3.3V側)のV, C（一番端の端子）, Gのそれぞれに、スライドボリュームの1, 2, 3番をビニール線で接続
+- PortBとGroveケーブル電源電圧変換モジュール(5V側)をGroveケーブルで接続。Groveケーブル電源電圧変換モジュール(3.3V側)のG(GND), C（一番端の端子）, V(+3.3V)のそれぞれに、スライドボリュームの1, 2, 3番をビニール線で接続（前述の「Groveケーブル用ネジ端子基板」を使うとネジ端子で固定できるが、ジャンパ線をGroveケーブルのコネクタに直接差し込むなどでもOK）
 
 
 ## ソレノイドの位置制御
