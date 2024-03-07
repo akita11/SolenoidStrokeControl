@@ -5,22 +5,43 @@
 ## 用意するもの
 
 - タカハの[ロングストロークソレノイドCH12840123](https://www.takaha-shop.com//SHOP/ch1284.html)
-- [スライドボリューム(B10kΩ)](https://akizukidenshi.com/catalog/g/g109238/)と接続用の適当なビニール線（3本）
+
 - Groveポートが2個あるマイコン。例えば[M5Stack Core2](https://www.switch-science.com/products/9349)と、[M5Stack Core2用ポート拡張モジュール](https://www.switch-science.com/products/8308)または[M5Core2BaseLite](https://www.switch-science.com/products/6763)
 - [SolenoidUnit](https://www.switch-science.com/products/8517)
-- [Groveケーブル電源電圧変換モジュール](https://www.switch-science.com/products/9461)
 - 12V電源(1A程度以上)。例えば[秋月M120100-A010JP](https://akizukidenshi.com/catalog/g/g117429/])必要に応じてそれ用のDCジャック。[M5Stack BAVG2ソケット](https://www.switch-science.com/products/7234)を使うと便利です
-- アクリル板(3mm厚)を加工データ"Attachment.pdf"でレーザーカットしたパーツ4点
 - M3x10ネジ（4本）
 - M3ナット（3個）
-- M2x10ネジ（2本）
-- Groveケーブル（3本）
-- スライドボリュームをGroveケーブルに接続する部品（[Groveケーブル用ネジ端子基板](https://www.switch-science.com/products/9397)を使うと簡便に固定できます
+その他に、以下の、いずれか
+- (1)M5Stack Faderユニットを使う場合（少し可動域が狭くやや動きが滑らかでなくなりますが組み立てが簡便）
+-- [M5Stack用フェーダーユニット](https://www.switch-science.com/products/7479)
+-- M4x12mmネジ+M4ナット、またはLEGO用ペグ（フェーダーユニット固定用）
+-- アクリル板(3mm厚)を加工データ"Attachment_FaderU.pdf"でレーザーカットしたパーツ4点
+-- Groveケーブル（1本）
 
+- (1)スライダボリューム部をはんだ付けして組み立てる場合（少し組み立てが煩雑ですが可動域が広い）
+-- [スライドボリューム(B10kΩ)](https://akizukidenshi.com/catalog/g/g109238/)と接続用の適当なビニール線（3本）
+-- [Groveケーブル電源電圧変換モジュール](https://www.switch-science.com/products/9461)
+-- アクリル板(3mm厚)を加工データ"Attachment.pdf"でレーザーカットしたパーツ4点
+-- M2x10ネジ（2本）
+-- Groveケーブル（3本）
+-- スライドボリュームをGroveケーブルに接続する部品（[Groveケーブル用ネジ端子基板](https://www.switch-science.com/products/9397)を使うと簡便に固定できます
 
 ## 組み立て
 
 ### 機構の組み立て
+
+(1)の場合
+
+<img src="https://github.com/akita11/SolenoidStrokeControl/blob/main/config3.jpg" width="320px">
+
+- Faderユニットをアクリルパーツ(1)に固定、それをロングストロークソレノイドにM3x10ネジ（2個）で固定する
+- ロングストロークソレノイドのお尻部分のネジにアクリルパーツ(2)をM3ナットで固定する
+- アクリルパーツ(3)(4)にM3x10ネジ+M3ナットをとりつけ、Faderユニットののツマミ部分をはずした軸をはさみつつ、アクリルパーツ(2)の穴にはさみ（アクリルパーツ(4)が外側）、ネジをしめて固定する
+
+(2)の場合
+- スライドボリュームをM2x10ネジ（2個）でアクリルパーツ(1)に固定、それをロングストロークソレノイドにM3x10ネジ（2個）で固定する
+- ロングストロークソレノイドのお尻部分のネジにアクリルパーツ(2)をM3ナットで固定する
+- アクリルパーツ(3)(4)にM3x10ネジ+M3ナットをとりつけ、スライドボリュームのツマミ部分をはさみつつ、アクリルパーツ(2)の穴にはさみ（アクリルパーツ(4)が外側）、ネジをしめて固定する
 
 <img src="https://github.com/akita11/SolenoidStrokeControl/blob/main/config1.jpg" width="320px">
 
@@ -29,13 +50,22 @@
 - アクリルパーツ(3)(4)にM3x10ネジ+M3ナットをとりつけ、スライドボリュームのツマミ部分をはさみつつ、アクリルパーツ(2)の穴にはさみ（アクリルパーツ(4)が外側）、ネジをしめて固定する
 
 
+
 ### 制御回路の接続
 
 ※以下はM5Stack Core2とPortA/PortBを使う場合の例です
 
+- PortAとSolenoidUnitをGroveケーブルで接続。SolenoidUnitのオレンジ色コネクタに、ソレノイド(A+・A-端子）と+12V電源を接続する
+
 <img src="https://github.com/akita11/SolenoidStrokeControl/blob/main/config2.jpg" width="320px">
 
-- PortAとSolenoidUnitをGroveケーブルで接続。SolenoidUnitのオレンジ色コネクタに、ソレノイド(A+・A-端子）と+12V電源を接続する
+(1)の場合
+
+- PortBとFaderユニットをGroveケーブルで接続する
+
+
+(2)の場合
+
 - PortBとGroveケーブル電源電圧変換モジュール(5V側)をGroveケーブルで接続。Groveケーブル電源電圧変換モジュール(3.3V側)のG(GND), C（一番端の端子）, V(+3.3V)のそれぞれに、スライドボリュームの1, 2, 3番をビニール線で接続（前述の「Groveケーブル用ネジ端子基板」を使うとネジ端子で固定できるが、ジャンパ線をGroveケーブルのコネクタに直接差し込むなどでもOK）
 
 
