@@ -13,18 +13,18 @@
 - M3ナット（3個）
 その他に、以下の、いずれか
 - (1)M5Stack Faderユニットを使う場合（少し可動域が狭くやや動きが滑らかでなくなりますが組み立てが簡便）
--- [M5Stack用フェーダーユニット](https://www.switch-science.com/products/7479)
--- M4x12mmネジ+M4ナット、またはLEGO用ペグ（フェーダーユニット固定用）
--- アクリル板(3mm厚)を加工データ"Attachment_FaderU.pdf"でレーザーカットしたパーツ4点
--- Groveケーブル（1本）
+  - [M5Stack用フェーダーユニット](https://www.switch-science.com/products/7479)
+  - M4x12mmネジ+M4ナット、またはLEGO用ペグ（フェーダーユニット固定用）
+  - アクリル板(3mm厚)を加工データ"Attachment_FaderU.pdf"でレーザーカットしたパーツ4点
+  - Groveケーブル（1本）
 
-- (1)スライダボリューム部をはんだ付けして組み立てる場合（少し組み立てが煩雑ですが可動域が広い）
--- [スライドボリューム(B10kΩ)](https://akizukidenshi.com/catalog/g/g109238/)と接続用の適当なビニール線（3本）
--- [Groveケーブル電源電圧変換モジュール](https://www.switch-science.com/products/9461)
--- アクリル板(3mm厚)を加工データ"Attachment.pdf"でレーザーカットしたパーツ4点
--- M2x10ネジ（2本）
--- Groveケーブル（3本）
--- スライドボリュームをGroveケーブルに接続する部品（[Groveケーブル用ネジ端子基板](https://www.switch-science.com/products/9397)を使うと簡便に固定できます
+- (2)スライダボリューム部をはんだ付けして組み立てる場合（少し組み立てが煩雑ですが可動域が広い）
+  - [スライドボリューム(B10kΩ)](https://akizukidenshi.com/catalog/g/g109238/)と接続用の適当なビニール線（3本）
+  - [Groveケーブル電源電圧変換モジュール](https://www.switch-science.com/products/9461)
+  - アクリル板(3mm厚)を加工データ"Attachment.pdf"でレーザーカットしたパーツ4点
+  - M2x10ネジ（2本）
+  - Groveケーブル（3本）
+  - スライドボリュームをGroveケーブルに接続する部品（[Groveケーブル用ネジ端子基板](https://www.switch-science.com/products/9397)を使うと簡便に固定できます
 
 ## 組み立て
 
